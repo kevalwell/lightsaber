@@ -1,38 +1,20 @@
 require 'sinatra'
 
 get '/' do
-  erb :index
-  redirect '/login'
+  <<-HTML
+<p>
+Welcome to my LightSaber.  Prepare to be amazed.
+<p>
+<a href='/sound'>Hear my swooshy sound!</a>
+  HTML
 end
 
-get '/applesauce' do
-  erb :apple_sauce
+get '/sound' do
+  <<-HTML
+<audio controls>
+  <source src="http://soundbible.com/grab.php?id=19&type=wav" type="audio/wav">
+  <source src="http://soundbible.com/grab.php?id=19&type=mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+  HTML
 end
-
-get '/creamcheese' do
-  erb :creamcheese
-end
-
-get '/bodybuilding' do
-  erb :bodybuilding
-end
-
-get '/login'
-	@user = User.create(params)
-	erb :form
-end
-# get '/form' do
-#   puts
-#    @message = params["message"]
-#   erb :form
-
-# end
-
-# get '/:name' do
-#  @name = params[:name]
-#  erb :name
-# end
-
-
-
-

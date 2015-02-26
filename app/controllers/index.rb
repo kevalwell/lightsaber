@@ -2,6 +2,7 @@ require 'sinatra'
 
 get '/' do
   erb :index
+  redirect '/login'
 end
 
 get '/applesauce' do
@@ -16,17 +17,21 @@ get '/bodybuilding' do
   erb :bodybuilding
 end
 
-get '/form' do
-  puts
-   @message = params["message"]
-  erb :form
-
+get '/login'
+	@user = User.create(params)
+	erb :form
 end
+# get '/form' do
+#   puts
+#    @message = params["message"]
+#   erb :form
 
-get '/:name' do
- @name = params[:name]
- erb :name
-end
+# end
+
+# get '/:name' do
+#  @name = params[:name]
+#  erb :name
+# end
 
 
 

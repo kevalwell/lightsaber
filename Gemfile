@@ -2,13 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 
-gem 'pg'
-
-gem 'activesupport'
-gem 'activerecord'
-
-gem 'rake'
-
+cc70680950a277983c80d2339c7f0381e983daaf
 group :test do
   gem 'rspec'
   gem 'rack-test'

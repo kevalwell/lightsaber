@@ -9,6 +9,8 @@ gem 'activerecord'
 
 gem 'rake'
 
+gem 'bcrypt'
+
 group :test do
   gem 'rspec'
   gem 'rack-test'

@@ -8,13 +8,33 @@ $(document).ready(function() {
       success: function(callback){
         console.log(callback);
       },
-       error: function(callback){
+      error: function(callback){
         console.log(callback.status);
       }
     })
 
 
   });
+
+  $('#loginbutton').click(function(e){
+    e.preventDefault();
+    data = $(this).closest('form').serialize();
+    console.log(data);
+    $.ajax({
+      url: "/login.json",
+      type: "post",
+      data: data,
+      success: function(callback){
+        console.log(callback);
+        $('.container').replaceWith('<div>You\'re in '+callback.username+' </div>');
+      },
+      error: function(callback){
+        console.log(callback.status);
+      }
+    })
+
+
+
+
+  });
 });
-
-

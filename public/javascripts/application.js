@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $('#loginbutton').click(function(e){
     e.preventDefault();
-    data = $(this).closest('form').serialize();
+    data = $('this').closest('form').serialize();
     console.log(data);
     $.ajax({
       url: "/login.json",
@@ -26,7 +26,7 @@ $(document).ready(function() {
       data: data,
       success: function(callback){
         console.log(callback);
-        $('.container').replaceWith('<div>You\'re in '+callback.username+' </div>');
+        $('.container').replaceWith('<div>Hi '+callback.username+' </div>');
       },
       error: function(callback){
         console.log(callback.status);

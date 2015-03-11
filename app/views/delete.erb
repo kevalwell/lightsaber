@@ -1,3 +1,4 @@
+<div id="container">
 <% if @review %>
   <p>Are you sure you want to delete the following review: <em>"<%= @review.comment %>"</em>?</p>
   <form action="/user/<%= @user.id %>/review/<%= @review.id %>/delete" method="post">
@@ -8,3 +9,4 @@
 <% else %>
   <p>Note not found.</p>
 <% end %>
+</div>

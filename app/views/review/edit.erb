@@ -1,0 +1,13 @@
+ <div id="container">
+ <h4><%= @review.store_name %></h4>
+<% if @review %>
+  <form action="/review/<%= @review.id %>/edit" method="post" id="edit">
+    <input type="hidden" name="_method" value="put">
+    <textarea name="comment"><%= @review.comment %></textarea>
+    <input type="submit">
+  </form>
+  <p><a href="/user/<%=session[:user_id] %>/review/<%= @review.id %>/delete">Delete</a></p>
+<% else %>
+  <p>Review not found.</p>
+<% end %>
+</div>

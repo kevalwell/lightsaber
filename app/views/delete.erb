@@ -1,0 +1,10 @@
+<% if @review %>
+  <p>Are you sure you want to delete the following review: <em>"<%= @review.comment %>"</em>?</p>
+  <form action="/user/<%= @user.id %>/review/<%= @review.id %>/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete It!">
+    <a href="/review/<%= @review.id %>">Cancel</a>
+  </form>
+<% else %>
+  <p>Note not found.</p>
+<% end %>

@@ -1,7 +1,7 @@
 get '/' do
   if session[:user_id]
-    @user = User.find_by(:user_id)
-    redirect "/user/#{user.id}"
+    @user = User.find(session[:user_id])
+    redirect "/user/#{@user.id}"
   else
     redirect '/authentication/login'
   end

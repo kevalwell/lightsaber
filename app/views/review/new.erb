@@ -1,7 +1,12 @@
-<div id="new_review">
-    <form action="/new/review" method="post">
-    <input type="text" name="store_name" placeholder="Store name">
-    <input type="text" rating="rating" placeholder="Rating"
-    <input type="text" name="comment" placeholder="Comment's">
-    <input type="submit" value="Create Post">
-  </div>
+<div class="container">
+<form action="/review/new" method="POST">
+  <input type="text" name="store_name" placeholder="Store Name">
+  <br>
+  <input type="text" name="rating" placeholder="Rating"
+  <br>
+  <textarea type="text" name="comment"placeholder="Comment's"></textarea>
+  <br>
+  <input type="submit" value="Create Review">
+</form>
+
+</div>

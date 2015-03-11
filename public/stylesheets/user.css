@@ -4,15 +4,8 @@ h3 {
   padding: 10px;
 }
 
-# {
-  font-family: monaco;
-  text-align: center;
-}
-
 .review_view_table {
-
   padding: 10px;
-
   width:70%;
   margin-left:15%;
   margin-right:15%;
@@ -24,4 +17,9 @@ h3 {
   padding: 10px;
   border: 1px solid #ddd;
   text-align: center;
+}
+
+#new_review {
+  text-align: right;
+  font-family: Arial;
 }

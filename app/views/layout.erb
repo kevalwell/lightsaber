@@ -19,9 +19,8 @@
   <%= yield %>
   <% if session[:user_id]%>
     <div class ="options">
-    <a href='/authentication/logout'> Logout </a> <br>
     <a href='/user/<%=session[:user_id] %>'>Home</a>
-    <%#current_user.id %>
+    <a href='/authentication/logout'> Logout </a> <br>
     </div>
   <%end%>
 </div>

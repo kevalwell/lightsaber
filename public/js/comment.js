@@ -1,5 +1,9 @@
 $(document.ready)(function(){
 
+  $("#container").click(function() {
+    $("#login").fadeIn("slow");
+  });
+
 $('#signup').click(function(e){
   e.preventDefault();
   $.ajax({
@@ -12,7 +16,6 @@ $('#signup').click(function(e){
         throw 500;
     }
   })
-});
 
 
 });

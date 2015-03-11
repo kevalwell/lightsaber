@@ -27,7 +27,11 @@ end
 put '/review/:id/edit' do
   r = Review.find(params[:id])
   r.comment = params[:comment]
-  r.save
+  if r.save
+    {:r => r, :status => "success"}.to_json
+  else
+    {:r => r, :status => "failure"}.to_json
+  end
   redirect '/'
 end
 
@@ -42,6 +46,10 @@ delete '/user/:user_id/review/:id/delete' do
   @user = User.find(params[:user_id])
   @reviews = Review.where("id = #{params[:id]}")
   r = Review.find(params[:id])
-  r.destroy
+  if r.destroy
+    {:r => r, :status => "success"}.to_json
+  else
+    {:r =>r, :status => "failure"}.to_json
+  end
   redirect '/'
 end

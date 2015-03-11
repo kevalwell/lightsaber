@@ -1,0 +1,13 @@
+body {
+  background-image: url("");
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 48px;
+  text-align: center;
+}
+
+#container {
+  text-align: center;
+}

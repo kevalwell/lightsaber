@@ -5,12 +5,12 @@ $(document).ready(function() {
     $.ajax({
       url: "/review/new",
       type: "get",
-      success: function(callback){
-        console.log(callback);
-        $('#new_review').replaceWith(callback)
+      success: function(response){
+        console.log(response);
+        $('#new_review').empty().append(response)
       },
-      error: function(callback){
-        console.log(callback.status);
+      error: function(response){
+        console.log(response.status);
       }
     })
   });
@@ -29,19 +29,22 @@ $(document).ready(function() {
         }
     })
   })
-$('#new_review').on('click','a',function(e){
+
+$('#new_review').on('submit','#review_form',function(e){
     e.preventDefault();
       $.ajax({
       url: "/review/new",
       type: "post",
-      data: null,
+      data: $('#review_form').serialize(),
       success: function(response){
+        console.log(response)
         $('#new_review').append(response)
+        $('#new_review').empty.append('a')
       },
       error: function(response){
         console.log(response.status)
       }
     })
-    })
-
+    });
 });
+

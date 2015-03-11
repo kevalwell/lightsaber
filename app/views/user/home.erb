@@ -12,11 +12,7 @@
         </thead>
         <tbody>
                 <% @reviews.each do |review| %>
-                <tr>
-                    <td><a href= "/review/<%= review.id %>"<%= review.store_name %></a></td>
-                    <td><%= review.updated_at.strftime("%m/%d/%Y at %I:%M %p")%></td>
-                    <td><a href="/review/<%= review.id %>"><%= review.store_name %></a> - <a href="/user/<%=session[:user_id] %>/review/<%= review.id %>/delete">Delete</a>-<a href='/review/<%= review.id %>/edit'> Edit</a></td>
-                </tr>
+                    <%= erb :"user/_review", locals: {review: review} %>
                 <% end %>
         </tbody>
     </table>

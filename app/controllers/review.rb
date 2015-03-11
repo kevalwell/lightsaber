@@ -12,9 +12,9 @@ post '/review/new' do
   params[:user_id] = session[:user_id]
   @review = Review.create(params)
   if request.xhr?
-    erb :'/review/view', :layout => false
+     erb :"user/_review", locals: {review: @review}, :layout => false
   else
-    erb:'/review/view'
+    erb :'/review/view'
   end
 end
 

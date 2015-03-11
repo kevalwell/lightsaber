@@ -1,0 +1,5 @@
+<tr>
+      <td><a href= "/employee/<%= employee.id %>"<%= employee.store_name %></a></td>
+     <td><%= employee.updated_at.strftime("%m/%d/%Y at %I:%M %p")%></td>
+      <td><a href="/employee/<%= employee.id %>"><%= employee.store_name %>-<%= employee.name %></a> - <a href="/user/<%=session[:user_id] %>/employee/<%= employee.id %>/delete">Delete</a>-<a href='/employee/<%= employee.id %>/edit'> Edit</a></td>
+</tr>

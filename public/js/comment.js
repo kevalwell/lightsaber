@@ -38,8 +38,8 @@ $('#new_review').on('submit','#review_form',function(e){
       data: $('#review_form').serialize(),
       success: function(response){
         console.log(response)
-        $('#new_review').append(response)
-        $('#new_review').empty.append('a')
+        $('.review_table tbody').first().append(response)
+        $('#new_review').empty().append("<a href ='/review/new'class='bttn'>New Review</a>")
       },
       error: function(response){
         console.log(response.status)

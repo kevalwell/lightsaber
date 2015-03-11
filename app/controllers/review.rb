@@ -8,6 +8,7 @@ post '/review/new' do
 
   params[:user_id] = session[:user_id]
   @review = Review.create(params)
+  @emp = Employee.create(@review.employee_id)
   erb :'review/view'
 
 end

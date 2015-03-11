@@ -1,0 +1,24 @@
+<h3>Navigation Page </h3
+
+  <div class="container">
+    <table class="review_table">
+        <thead>
+            <tr>
+                <th>Reviews</th>
+            </tr>
+        </thead>
+        <tbody>
+                <% @reviews.each do |review| %>
+                <tr>
+                    <td><a href= "/review/<%= review.id %>"<%= review.store_name %></a></td>
+                    <td><%= review.updated_at.strftime("%m/%d/%Y at %I:%M %p")%></td>
+                    <td><a href="/review/<%= review.id %>/edit"</a> | <a href="/review/<%= review.id %>">Results</a> | Delete | Edit</td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+
+      </div>
+      <div id='new_review'
+      <a href ='/review/new'>New Review</a>
+    </div>

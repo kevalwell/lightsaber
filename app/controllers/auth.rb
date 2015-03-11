@@ -1,38 +1,38 @@
 get '/' do
   if session[:user_id]
-    @dreams = Dream.all
-    erb :'review/user_page'
+    @user = User.find_by(:user_id)
+    redirect "/user/#{user.id}"
   else
-    redirect '/login'
+    redirect '/authentication/login'
   end
 end
 
-get '/login' do
-  erb :login
+get '/authentication/login' do
+  erb :'authentication/login'
 end
 
-post '/login' do
-  @user = User.find_by(email: params[:email])
+post '/authentication/login' do
+  user = User.find_by(email: params[:email])
 
-  if @user || @user.try(:authenticate, params[:password])
-    session[:user_id] = @user.id
-    redirect "user_page/#{@user.id}"
+  if user && user.authenticate(params[:password])
+    session[:user_id] = user.id
+    redirect "/user/#{user.id}"
   else
-    redirect '/login'
+    redirect '/authentication/asdf'
   end
 end
 
-get '/signup' do
-  erb :signup
+get '/authentication/signup' do
+  erb :'authentication/signup'
 end
 
-post '/signup' do
+post '/authentication/signup' do
   @user = User.create(params)
   session[:user_id] = @user.id
   redirect '/'
 end
 
-get '/logout' do
+get '/authentication/logout' do
   session[:user_id] = nil
   redirect '/'
 end

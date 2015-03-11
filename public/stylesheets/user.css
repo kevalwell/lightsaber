@@ -22,3 +22,15 @@ h3 {
   text-align: right;
   font-family: Arial;
 }
+
+a.bttn {
+  width: 115px;
+  height: 25px;
+  background: #696969;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-family: Arial;
+}

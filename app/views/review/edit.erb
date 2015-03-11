@@ -2,9 +2,13 @@
  <h4><%= @review.store_name %></h4>
 <% if @review %>
   <form action="/review/<%= @review.id %>/edit" method="post" id="edit">
+    <br>
     <input type="hidden" name="_method" value="put">
+    <br>
     <textarea name="comment"><%= @review.comment %></textarea>
+    <br>
     <input type="submit">
+    <br>
   </form>
   <p><a href="/user/<%=session[:user_id] %>/review/<%= @review.id %>/delete">Delete</a></p>
 <% else %>

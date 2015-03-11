@@ -1,16 +1,21 @@
 get '/review/new' do
     redirect '/authentication/login' if !session[:user_id]
-
-  erb :'/review/new'
+  if request.xhr?
+    erb :'/review/new', :layout => false
+  else
+    erb :'/review/new'
+  end
 end
 
 post '/review/new' do
 
   params[:user_id] = session[:user_id]
   @review = Review.create(params)
-  @emp = Employee.create(@review.employee_id)
-  erb :'review/view'
-
+  if request.xhr?
+    erb :'/review/view', :layout => false
+  else
+    erb:'/review/view'
+  end
 end
 
 get '/review/:id' do

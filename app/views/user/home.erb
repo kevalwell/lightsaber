@@ -1,4 +1,4 @@
-<h3>Navigation Page </h3
+<h3>Honest Review Navigation</h3
 <div>
       <div id='new_review'>
       <a href ='/review/new'>New Review</a>
@@ -7,7 +7,7 @@
     <table class="review_table">
         <thead>
             <tr>
-                <th id='header_table'>Reviews</th>
+                <th id='header_table'>Business's</th>
             </tr>
         </thead>
         <tbody>
@@ -21,4 +21,28 @@
         </tbody>
     </table>
   </div>
+
+
+  <div class="container">
+    <div id='new_employee'>
+      <a href ='/employee/new'>New Employee</a>
+    </div>
+    <table class="employee_table">
+        <thead>
+            <tr>
+                <th id='header_table'>Employees</th>
+            </tr>
+        </thead>
+        <tbody>
+                <% @employees.each do |employee| %>
+                <tr>
+                    <td><a href= "/employee/<%= employee.id %>"<%= employee.store_name %></a></td>
+                    <td><%= employee.updated_at.strftime("%m/%d/%Y at %I:%M %p")%></td>
+                    <td><a href="/employee/<%= employee.id %>"><%= employee.store_name %>-<%= employee.name %></a> - <a href="/user/<%=session[:user_id] %>/employee/<%= employee.id %>/delete">Delete</a>-<a href='/employee/<%= employee.id %>/edit'> Edit</a></td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+  </div>
 </div>
+

@@ -11,15 +11,14 @@ h3 {
   margin-right:15%;
 }
 
-.container {
-  height: 30px;
-  width: 480px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
+
 
 #new_review {
+  text-align: right;
+  font-family: Arial;
+}
+
+#new_employee {
   text-align: right;
   font-family: Arial;
 }

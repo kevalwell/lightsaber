@@ -1,0 +1,20 @@
+ <div id="container">
+ <h4><%= @employee.name %></h4>
+<% if @employee %>
+  <form action="/employee/<%= @employee.id %>/edit" method="post" id="edit">
+    <br>
+    <input type="hidden" name="_method" value="put">
+    <br>
+    <input type="text" name="name" placeholder="<%= @employee.name %>"
+    <br>
+    <input type="text" name="rating" placeholder="<%= @employee.rating %>"
+    <br>
+    <textarea name="comment"><%= @employee.comment %></textarea>
+    <br>
+    <input type="submit">
+  </form>
+  <p><a href="/user/<%=session[:user_id] %>/employee/<%= @employee.id %>/delete">Delete</a></p>
+<% else %>
+  <p>Employee not found.</p>
+<% end %>
+</div>

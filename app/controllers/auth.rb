@@ -16,8 +16,10 @@ post '/authentication/login' do
 
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
+    user.to_json
     redirect "/user/#{user.id}"
   else
+    403
     redirect '/authentication/asdf'
   end
 end

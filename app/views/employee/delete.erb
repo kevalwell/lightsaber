@@ -1,0 +1,12 @@
+<div id="container">
+<% if @employee %>
+  <p>Are you sure you want to delete the following review: <em>"<%= @employee.comment %>"</em>?</p>
+  <form action="/user/<%= @user.id %>/employee/<%= @employee.id %>/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete It!">
+    <a href="/employee/<%= @employee.id %>">Cancel</a>
+  </form>
+<% else %>
+  <p>Review not found.</p>
+<% end %>
+</div>

@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration
       t.string :rating
       t.string :comment
       t.references :employee
-      t.references :user, null: false
+      t.references :user
 
       t.timestamps
     end

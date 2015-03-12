@@ -16,3 +16,7 @@ review4 = Review.create(store_name: "Dev Bootcamp", rating: '4', comment: "Had a
 review5 = Review.create(store_name: "Dev Bootcamp", rating: '2', comment: "I noticed they stopped restocking the teddy grams which is a little disturbing.. More on this soon.", employee_id: employee2.id, user_id: user1.id)
 review6 = Review.create(store_name: "Barringer", rating: '1', comment: "This sales rep seemed incompetent, I dont think they actually knew anything about the business.", employee_id: employee1.id, user_id: user2.id)
 review7 = Review.create(store_name: "Liquor Depot", rating: '5', comment: "Employee was very helpful, he helped me choose the perfect liquor for my mother .", employee_id: employee1.id, user_id: user2.id)
+review8 = Review.create(store_name: "Loews", rating: '5', comment: "Place was extremely dirty")
+review9 = Review.create(store_name: "PizzaHut", rating: '4', comment: "Employees were not courteous, and smelled funny.")
+review10 = Review.create(store_name: "Target", rating: '2', comment: "These people seemed to care about their customers")
+review11 = Review.create(store_name: "Bestbuy", rating: '4', comment: "Had an exceptional class with my well versed instructors, I am greatful for their vast knowledge.")

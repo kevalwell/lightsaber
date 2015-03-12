@@ -11,7 +11,13 @@ h3 {
   margin-right:15%;
 }
 
+#login {
+  box-shadow: 0 0 200px;
+}
 
+#signup {
+  box-shadow: 0 0 200px;
+}
 
 #new_review {
   text-align: right;
@@ -21,6 +27,34 @@ h3 {
 #new_employee {
   text-align: right;
   font-family: Arial;
+}
+
+.employee_view_table {
+  font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica,
+  sans-serif;
+  color: #696969;
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  border-top: 1px solid #C1DAD7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 6px 6px 6px 12px;
+  background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+}
+
+.review_view_table {
+  font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica,
+  sans-serif;
+  color: #696969;
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  border-top: 1px solid #C1DAD7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 6px 6px 6px 12px;
+  background: #CAE8EA url(images/bg_header.jpg) no-repeat;
 }
 
 a.bttn {

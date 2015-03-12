@@ -5,7 +5,7 @@
     <br>
     <input type="hidden" name="_method" value="put">
     <br>
-    <textarea name="comment"><%= @review.comment %></textarea>
+    <textarea name="comment" id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')"><%= @review.comment %></textarea>
     <br>
     <input type="submit">
     <br>

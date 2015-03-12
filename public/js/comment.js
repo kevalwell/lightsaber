@@ -1,4 +1,16 @@
+var employeeObject = function(employee) {
+  this.name = empoyee.name
+  this.comment = employee.comment
+  this.store_name = employee.store_name
+}
+
 $(document).ready(function() {
+
+  function setbg(color)
+    {
+      document.getElementById("styled").style.background=color
+    }
+
   $('#new_review').on('click','a',function(e){
     e.preventDefault();
 
@@ -47,4 +59,5 @@ $('#new_review').on('submit','#review_form',function(e){
     })
     });
 });
+
 

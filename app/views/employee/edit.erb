@@ -9,7 +9,7 @@
     <br>
     <input type="text" name="rating" placeholder="<%= @employee.rating %>"
     <br>
-    <textarea name="comment"><%= @employee.comment %></textarea>
+    <textarea name="comment" id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')"><%= @employee.comment %></textarea>
     <br>
     <input type="submit">
   </form>

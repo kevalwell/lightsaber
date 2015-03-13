@@ -6,11 +6,6 @@ var employeeObject = function(employee) {
 
 $(document).ready(function() {
 
-  function setbg(color)
-    {
-      document.getElementById("styled").style.background=color
-    }
-
   $('#new_review').on('click','a',function(e){
     e.preventDefault();
 
